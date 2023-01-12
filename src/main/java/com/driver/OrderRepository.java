@@ -4,17 +4,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class OrderRepository {
-    private HashMap<String,Order> orderDb;
-    private HashMap<String,DeliveryPartner> deliveryPartnerDb;
-    private HashMap<String,List<String>> orderDeliveryPartnerDb;
-    private HashMap<String,Order> unassignedOrderDb;
-
-    public OrderRepository() {
-        this.orderDb = new HashMap<>();
-        this.deliveryPartnerDb = new HashMap<>();
-        this.orderDeliveryPartnerDb = new HashMap<>();
-        this.unassignedOrderDb = new HashMap<>();
-    }
+    private HashMap<String,Order> orderDb= new HashMap<>();
+    private HashMap<String,DeliveryPartner> deliveryPartnerDb= new HashMap<>();
+    private HashMap<String,List<String>> orderDeliveryPartnerDb= new HashMap<>();
+    private HashMap<String,Order> unassignedOrderDb= new HashMap<>();
 
     void addOrder(Order order){
         String id= order.getId();
